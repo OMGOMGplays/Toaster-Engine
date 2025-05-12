@@ -116,7 +116,6 @@ public static class AudioManager
     /// Plays a sound from a specified entity, utilizing its position and velocity to determine 3D values.
     /// </summary>
     /// <param name="source">The source of this audio.</param>
-    /// <param name="listener">A listener to this audio.</param>
     /// <param name="filepath">The path to the specific sound we wish to play.</param>
     /// <param name="volume">Determines the volume of which this sound should play at. (Scale of 0.0f - 1.0f)</param>
     /// <param name="repeats">Determines whether or not this sound should repeat (loop) or not.</param>
