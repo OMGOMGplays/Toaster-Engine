@@ -1,52 +1,27 @@
 ﻿using System;
 
-using Silk.NET.OpenAL;
+using OpenTK.Audio.OpenAL;
 
 namespace Toast.Engine.Resources.Audio;
 
 public class AudioFile : IDisposable
 {
-    public string filepath;
-    public float volume;
-    public bool repeats;
+    public string Filepath;
+    public float Volume;
+    public bool Repeats;
 
-    public AL alApi;
-    public ALContext alContext;
+    public byte[] Data;
 
-    public unsafe Device* alDevice;
-    public unsafe Context* alCtx;
+    public int NumChannels;
+    public int BitsPerSample;
+    public int SampleRate;
 
-    public uint src;
-    public uint buf;
+    public int Buffer;
+    public int Source;
+    public int State;
 
     public void Dispose()
     {
-        //
-        // Dispose of OpenAL-related variables
-        //
-
-        // Get the state of this source
-        alApi.GetSourceProperty( src, GetSourceInteger.SourceState, out int state );
-
-        // If the source isn't stopped...
-        if ( state != (int)SourceState.Stopped || state != 0 )
-        {
-            // Stop it!
-            alApi.SourceStop( src );
-        }
-
-        // Handle smaller variables
-        alApi.DeleteSource( src );
-        alApi.DeleteBuffer( buf );
-
-        unsafe
-        {
-            alContext.DestroyContext( alCtx );
-            alContext.CloseDevice( alDevice );
-        }
-
-        // Dispose of the API and context
-        alApi.Dispose();
-        alContext.Dispose();
+        
     }
 }

@@ -41,8 +41,7 @@
 		<PackageReference Include="DiscordRichPresence" Version="1.2.1.24" />
 		<PackageReference Include="ImGui.NET" Version="1.91.6.1" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-		<PackageReference Include="Silk.NET.Core" Version="2.22.0" />
-		<PackageReference Include="Silk.NET.OpenAL" Version="2.22.0" />
+		<PackageReference Include="OpenTK.Audio.OpenAL" Version="5.0.0-pre.13" />
 		<PackageReference Include="Veldrid" Version="4.9.0" />
 		<PackageReference Include="Veldrid.StartupUtilities" Version="4.9.0" />
 		<PackageReference Include="Veldrid.SPIRV" Version="1.0.15" />
